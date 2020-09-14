@@ -29,5 +29,6 @@
         </GroupBox>
         <Button x:Name="buttonEnvoyer" Content="Envoyer" Grid.Column="1" HorizontalAlignment="Center" Margin="0" Grid.Row="3" Width="100" Click="buttonEnvoyer_Click"/>
         <Button x:Name="buttonClear" Content="Clear" Grid.Column="3" HorizontalAlignment="Center" Margin="0,1,0,0" Grid.Row="3" Width="100" Click="buttonClear_Click"/>
+        <Button x:Name="buttonTest" Content="TEST" Grid.Column="2" Margin="0" Grid.Row="3" Background="#FFF4FF00" BorderBrush="Red" FontWeight="Bold" Click="buttonTest_Click"/>
     </Grid>
 </Window>

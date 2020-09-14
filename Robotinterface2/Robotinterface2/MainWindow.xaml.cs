@@ -86,14 +86,19 @@ namespace Robotinterface2
             receivedtext = "";
         }
 
+        private void buttonTest_Click(object sender, RoutedEventArgs e)
+        {
+            byte[] byteList = byte[20];
+        }
 
-
-
+        
         void Sendmessage()
         {
             string texteE = textBoxEmission.Text;
             serialPort1.WriteLine(texteE);
             textBoxEmission.Clear();
         }
+
+        
     }
 }
