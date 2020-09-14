@@ -1,0 +1,15 @@
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\bin\Debug\Robotinterface2.exe.config
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\bin\Debug\Robotinterface2.exe
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\bin\Debug\Robotinterface2.pdb
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\Robotinterface2.csprojAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\MainWindow.g.cs
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\App.g.cs
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\Robotinterface2_MarkupCompile.cache
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\Robotinterface2_MarkupCompile.lref
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\MainWindow.baml
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\Robotinterface2.g.resources
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\Robotinterface2.Properties.Resources.resources
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\Robotinterface2.csproj.GenerateResource.cache
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\Robotinterface2.csproj.CoreCompileInputs.cache
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\Robotinterface2.exe
+C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\Robotinterface2.pdb
