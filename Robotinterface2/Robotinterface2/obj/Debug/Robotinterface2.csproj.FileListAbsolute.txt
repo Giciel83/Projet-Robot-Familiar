@@ -13,6 +13,3 @@ C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robot
 C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\Robotinterface2.csproj.CoreCompileInputs.cache
 C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\Robotinterface2.exe
 C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\Robotinterface2.pdb
-C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\bin\Debug\ExtendedSerialPort.dll
-C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\bin\Debug\ExtendedSerialPort.pdb
-C:\Users\Thomas\Documents\GitHub\IUT-Robot-Thomas-Familiar\Robotinterface2\Robotinterface2\obj\Debug\Robotinterface2.csproj.CopyComplete

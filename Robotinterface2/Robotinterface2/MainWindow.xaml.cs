@@ -1,8 +1,10 @@
 ﻿using System;
 using System.IO.Ports;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,7 +28,9 @@ namespace Robotinterface2
 
     public partial class MainWindow : Window
     {
-        SerialPort serialPort1;
+
+        ReliableSerialPort serialPort1;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -44,8 +48,8 @@ namespace Robotinterface2
         {
             String texteE = textBoxEmission.Text;
             serialPort1.WriteLine(texteE);
-            textBoxReception.Text = "Reçu : " + texteE + "\n";
-            textBoxEmission.Text = "";
+           /* textBoxReception.Text = "Reçu : " + texteE + "\n";
+            textBoxEmission.Text = "";*/
         }
 
         
