@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ExtendedSerialPort;
+using System.Windows.Threading;
 
 namespace Robotinterface2
 {
@@ -28,30 +29,43 @@ namespace Robotinterface2
 
     public partial class MainWindow : Window
     {
-
+        
         ReliableSerialPort serialPort1;
+        DispatcherTimer timerAffichage;
+
+        private string receivedtext;
+        private string receivedtextAnt;
+
 
         public MainWindow()
         {
             InitializeComponent();
+            /*----------------------------Init du port série + évenement datareceived------------------------------------*/
             serialPort1 = new ReliableSerialPort("COM8", 115200, Parity.None, 8, StopBits.One); //entrée USB à droite
             serialPort1.DataReceived += SerialPort1_DataReceived;
             serialPort1.Open();
+            /*-----------------------------------------------------------------------------------------------------------*/
+
+            /*-----------------------------------Init Timer-------------------------*/
+            timerAffichage = new DispatcherTimer(); 
+            timerAffichage.Interval = new TimeSpan(0, 0, 0, 0, 100);
+            timerAffichage.Tick += TimerAffichage_Tick;
+            timerAffichage.Start();
+        }   /*-----------------------------------------------------------------------*/
+
+        private void TimerAffichage_Tick(object sender, EventArgs e)
+        {
+            if (receivedtext != receivedtextAnt)
+            {
+                textBoxReception.Text = receivedtext;
+                receivedtextAnt = receivedtext;
+            }
         }
 
         private void SerialPort1_DataReceived(object sender, DataReceivedArgs e)
         {
-            textBoxReception.Text += Encoding.UTF8.GetString(e.Data, 0, e.Data.Length);
+            receivedtext += Encoding.UTF8.GetString(e.Data, 0, e.Data.Length);
         }
-
-        void Sendmessage()
-        {
-            String texteE = textBoxEmission.Text;
-            serialPort1.WriteLine(texteE);
-           /* textBoxReception.Text = "Reçu : " + texteE + "\n";
-            textBoxEmission.Text = "";*/
-        }
-
         
         private void buttonEnvoyer_Click(object sender, RoutedEventArgs e)
         {
@@ -64,6 +78,22 @@ namespace Robotinterface2
             {
                 Sendmessage();
             }
+        }
+
+        private void buttonClear_Click(object sender, RoutedEventArgs e)
+        {
+            textBoxReception.Clear();
+            receivedtext = "";
+        }
+
+
+
+
+        void Sendmessage()
+        {
+            string texteE = textBoxEmission.Text;
+            serialPort1.WriteLine(texteE);
+            textBoxEmission.Clear();
         }
     }
 }
