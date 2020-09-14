@@ -24,5 +24,16 @@ namespace Robotinterface2
         {
             InitializeComponent();
         }
+        private void buttonEnvoyer_Click(object sender, RoutedEventArgs e)
+        {
+            Brush currentBackground = buttonEnvoyer.Background;
+            if(currentBackground != Brushes.RoyalBlue)
+            {
+                buttonEnvoyer.Background = Brushes.RoyalBlue;
+            }
+            else buttonEnvoyer.Background = Brushes.Beige;
+
+        }
+        
     }
 }
