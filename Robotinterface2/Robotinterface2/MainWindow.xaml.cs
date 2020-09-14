@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO.Ports;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -13,26 +14,41 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ExtendedSerialPort;
 
 namespace Robotinterface2
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
     /// </summary>
+
+
+
     public partial class MainWindow : Window
     {
+        SerialPort serialPort1;
         public MainWindow()
         {
             InitializeComponent();
+            serialPort1 = new ReliableSerialPort("COM8", 115200, Parity.None, 8, StopBits.One); //entrée USB à droite
+            serialPort1.DataReceived += SerialPort1_DataReceived;
+            serialPort1.Open();
+        }
+
+        private void SerialPort1_DataReceived(object sender, DataReceivedArgs e)
+        {
+            textBoxReception.Text += Encoding.UTF8.GetString(e.Data, 0, e.Data.Length);
         }
 
         void Sendmessage()
         {
-            String prevtexteR = textBoxReception.Text;
             String texteE = textBoxEmission.Text;
-            textBoxReception.Text = prevtexteR + "Reçu : " + texteE + "\n";
+            serialPort1.WriteLine(texteE);
+            textBoxReception.Text = "Reçu : " + texteE + "\n";
             textBoxEmission.Text = "";
         }
+
+        
         private void buttonEnvoyer_Click(object sender, RoutedEventArgs e)
         {
             Sendmessage();
